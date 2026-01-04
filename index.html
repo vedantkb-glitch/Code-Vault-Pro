@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Code Vault Pro</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>🧠 Code Vault Pro</h1>
+
+<input id="title" placeholder="Project Name">
+
+<div class="tabs">
+  <button class="active" onclick="showTab('html', event)">HTML</button>
+  <button onclick="showTab('css', event)">CSS</button>
+  <button onclick="showTab('js', event)">JS</button>
+</div>
+
+<textarea id="html" class="active" placeholder="HTML code"></textarea>
+<textarea id="css" placeholder="CSS code"></textarea>
+<textarea id="js" placeholder="JavaScript code"></textarea>
+
+<button class="save" onclick="saveCode()">💾 Save</button>
+<button class="run" onclick="runCode()">▶ Run (New Page)</button>
+<button class="delete" onclick="deleteCode()">🗑 Delete</button>
+
+<select id="saved" onchange="loadCode()">
+  <option value="">📂 Saved Projects</option>
+</select>
+
+<script src="script.js"></script>
+</body>
+</html>

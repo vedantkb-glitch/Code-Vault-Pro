@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Output</title>
+</head>
+<body>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+const project = params.get("project");
+
+if (!project) {
+  document.body.innerHTML = "<h2>No project selected</h2>";
+} else {
+  const data = JSON.parse(localStorage.getItem(project));
+
+  document.open();
+  document.write(`
+    <html>
+    <head>
+      <title>${project}</title>
+      <style>${data.css}</style>
+    </head>
+    <body>
+      ${data.html}
+      <script>${data.js}<\/script>
+    </body>
+    </html>
+  `);
+  document.close();
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+body {
+  background: #020617;
+  color: white;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+input, textarea, button, select {
+  width: 100%;
+  padding: 10px;
+  margin: 6px 0;
+  border-radius: 6px;
+  border: none;
+}
+
+textarea {
+  height: 180px;
+  font-family: monospace;
+  display: none;
+}
+
+textarea.active {
+  display: block;
+}
+
+.tabs button {
+  width: 32%;
+  background: #1e293b;
+  color: white;
+  cursor: pointer;
+}
+
+.tabs button.active {
+  background: #6366f1;
+}
+
+.save { background: #22c55e; }
+.run { background: #3b82f6; }
+.delete { background: #ef4444; }
